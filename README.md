@@ -16,10 +16,10 @@
 ---
 
 ## ⚡ One-Click Installation (Termux)
-Just copy the single command below, paste it into Termux, and press Enter. It will install everything and start the tool automatically!
+Just copy the single command below, paste it into Termux, and press Enter. It will bypass any existing folder errors, install everything, and start the tool automatically!
 
 ```bash
-pkg update -y && pkg install git python -y && git clone [https://github.com/zetheres/zfetch.git](https://github.com/zetheres/zfetch.git) && cd zfetch && python zfetch.py
+pkg update -y && pkg install git python -y && rm -rf zfetch && git clone https://github.com/zetheres/zfetch && cd zfetch && python zfetch.py
 ```
 
 ---
@@ -29,14 +29,13 @@ If you prefer installing step-by-step, run the following commands one by one in 
 
 ```bash
 # 1. Update Termux packages
-pkg update && pkg upgrade -y
+pkg update -y && pkg upgrade -y
 
 # 2. Install Git and Python
 pkg install git python -y
 
 # 3. Clone this repository
-git clone [https://github.com/zetheres/zfetch.git](https://github.com/zetheres/zfetch.git)
-
+git clone https://github.com/zetheres/zfetch
 # 4. Navigate into the folder
 cd zfetch
 
